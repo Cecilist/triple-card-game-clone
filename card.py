@@ -9,8 +9,13 @@ class Card:
         self.east   = east
         self.west   = west
         self.player = player
-        position = NULL
+        self.pos = -1
+        
     
     def __str__(self):
-        return self.name + " Controlled by:" + self.player + ".\n Values are N:"+ str(self.north)+ " S:" + str(self.south) + " E:"+ str(self.south)+ " W:"+ str(self.west)
+        return self.name + " Controlled by:" + self.player + ".\n Values are N:"+ str(self.north)+ " S:" + str(self.south) +\
+             " E:"+ str(self.south)+ " W:"+ str(self.west) + " Position:" + str(self.pos)
+
+    def setPos(self, newPos):
+        self.pos = newPos
 
